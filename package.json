@@ -1,11 +1,11 @@
 {
-  "name": "gatsby-starter-blog",
+  "name": "pcc-website",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
+  "description": "An official website for PCC",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Ajeigbe John Oluwaseyi <ajeigbejohnolu@gmail.com>",
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/John-pels/pcc-website"
   },
   "dependencies": {
     "babel-plugin-styled-components": "^1.11.1",
@@ -41,7 +41,7 @@
     "prettier": "2.1.2",
     "typescript": "^4.0.5"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
+  "homepage": "https://github.com/John-pels/pcc-website#readme",
   "keywords": [
     "gatsby"
   ],
@@ -49,7 +49,7 @@
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
+    "url": "git+https://github.com/John-pels/pcc-website.git"
   },
   "scripts": {
     "build": "gatsby build",
