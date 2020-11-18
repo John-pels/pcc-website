@@ -5,6 +5,8 @@
 const colors = {
   primary: "#3462FB",
   white: "#FFF",
+  purple: "#8a4ef1",
+  hue: "hsla(0,0%,0%,0.8)",
 }
 
 /**

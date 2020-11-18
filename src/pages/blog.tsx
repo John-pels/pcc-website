@@ -1,15 +1,16 @@
 import React from "react"
+
 import Layout from "../components/layout"
 import { getAllPosts } from "../query/getAll"
 import { PostCard } from "../components/post-card"
 import { Flex, PostCardColumn } from "../components/container"
 
-const Home = ({ location }) => {
+const Blog = () => {
   const data = getAllPosts()
   const posts = data.allMarkdownRemark.nodes
 
   return (
-    <Layout title="Home" location={location}>
+    <Layout title="Blog">
       <Flex>
         {posts.map((post: any) => {
           return (
@@ -37,4 +38,4 @@ const Home = ({ location }) => {
   )
 }
 
-export default Home
+export default Blog
