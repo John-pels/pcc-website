@@ -3,8 +3,7 @@ title: My Second Post!
 date: "2020-05-06T23:46:37.121Z"
 description: This is a custom description for SEO and Open Graph purposes, rather than the default generated excerpt. Simply add a description field to the frontmatter.
 image: "../../assets/blog2.jpg"
-tags: ["organization", "banking", "health"]
-author: Jack Ba
+tags: ["economy"]
 ---
 
 Wow! I love blogging so much already.

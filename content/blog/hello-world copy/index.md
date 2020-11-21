@@ -3,7 +3,8 @@ title: Hello World
 date: "2015-05-01T22:12:03.284Z"
 description: "description: This is a custom description for SEO and Open Graph purposes,  generated excerpt. Simply add a description field to the frontmatter."
 image: './salty_egg.jpg'
-tags: ["sport", "engineering"]
+tags: ["business", "finance"]
+author: Justin Lex
 ---
 
 This is my first post on my new fake blog! How exciting!

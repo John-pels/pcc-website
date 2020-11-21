@@ -22,12 +22,12 @@ interface NavbarTypes {
 
 const items: NavItemsTypes[] = [
   {
-    name: "Products",
-    path: "/",
+    name: "About Us",
+    path: "/about",
   },
   {
-    name: "Support",
-    path: "/",
+    name: "Gallery",
+    path: "/gallery",
   },
   {
     name: "Blog",
@@ -111,10 +111,8 @@ const Navbar = ({ location }: NavbarTypes) => {
         ))}
 
         <NavbarFlexButtonContainer>
-          <Link to="/" className="first">
-            <span>Login</span>
-          </Link>
-          <Link to="/">
+        
+          <Link to="/contact">
             <NavbarFlexButton>Contact Us</NavbarFlexButton>
           </Link>
         </NavbarFlexButtonContainer>

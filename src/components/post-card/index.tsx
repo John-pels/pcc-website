@@ -9,14 +9,23 @@ import {
   PostDescription,
   DesciptionContainer,
   PostDate,
+  PostTTR,
+  PostBase,
 } from "./style"
+import { getDescription } from "../../utils/getDescription"
+import moment from "moment"
+import { getSlug } from "../../utils/getSlug"
 
 export const PostCard = ({ post }) => {
   const title = post.frontmatter.title || post.fields.slug
   const image = post?.frontmatter?.image?.childImageSharp?.fluid
+
+  const _description = post?.frontmatter?.description
+  const formattedDescription = getDescription(_description)
+
   return (
     <PostCardContainer>
-      <Link to={post.fields.slug} itemProp="url">
+      <Link to={getSlug(post.fields.slug)} itemProp="url">
         <ImageContainer>
           <Image
             fluid={image}
@@ -32,15 +41,20 @@ export const PostCard = ({ post }) => {
         <PostTitle>
           <span itemProp="headline">{title}</span>
         </PostTitle>
+
         <DesciptionContainer>
           <PostDescription
             dangerouslySetInnerHTML={{
-              __html: post.frontmatter.description || post.excerpt,
+              __html: formattedDescription,
             }}
             itemProp="description"
           />
         </DesciptionContainer>
-        <PostDate>{post.frontmatter.date}</PostDate>
+
+        <PostBase>
+          <PostTTR>{post.timeToRead} mins read</PostTTR>
+          <PostDate>{moment(post.frontmatter.date).fromNow()}</PostDate>
+        </PostBase>
       </Link>
     </PostCardContainer>
   )

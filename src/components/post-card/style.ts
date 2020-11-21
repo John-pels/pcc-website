@@ -16,33 +16,45 @@ export const ImageContainer = styled.div`
 
   ${({ theme }) => theme?.media.md} {
     width: 100%;
-    height: 100%;
+    height: 150px;
   }
 `
 
 export const PostCategory = styled.p`
-  font-size: ${({ theme }) => theme?.fontSize?.small};
+  font-size: 10px;
   text-transform: uppercase;
+  margin-top: 1.5rem;
   color: ${({ theme }) => theme?.colors?.hue};
 `
 
 export const PostTitle = styled.h3`
+  margin: 1rem 0;
+  /* min-height: 40px; */
   color: ${({ theme }) => theme?.colors?.primary};
-  font-size: ${({ theme }) => theme?.fontSize?.heading};
+  font-size: ${({ theme }) => theme?.fontSize?.custom(17)};
+  line-height: 28px;
 `
 
 export const DesciptionContainer = styled.div``
 
 export const PostDescription = styled.article`
-  min-height: 100px;
   color: ${({ theme }) => theme?.colors?.hue};
-  font-size: ${({ theme }) => theme?.fontSize?.heading};
-  font-size: ${({ theme }) => theme?.fontSize?.normal};
-  line-height: 25px;
+  font-size: ${({ theme }) => theme?.fontSize?.small};
+  line-height: 21px;
+  margin-bottom: 1rem;
 `
 
 export const PostDate = styled.p`
+  margin: 0;
   color: ${({ theme }) => theme?.colors?.hue};
-  font-size: ${({ theme }) => theme?.fontSize?.heading};
   font-size: ${({ theme }) => theme?.fontSize?.small};
+`
+
+export const PostTTR = styled(PostDate)``
+
+export const PostBase = styled.div`
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 `
