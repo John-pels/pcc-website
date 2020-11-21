@@ -55,7 +55,8 @@
     "url": "git+https://github.com/John-pels/pcc-website.git"
   },
   "scripts": {
-    "build": "gatsby build",
+    "dev": "gatsby develop --host 0.0.0.0",
+    "build": "CI=gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "npm run develop",

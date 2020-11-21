@@ -68,6 +68,7 @@ const Bio = ({ date, ttr, author }: DateType) => {
           />
         )}
       </ImageWrapper>
+      
 
       <AuthorInfo>
         {postAuthor && (
