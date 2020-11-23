@@ -17,8 +17,7 @@ import {
 const Highlight = () => {
   const data = getAllPosts()
 
-  const posts = data.allMarkdownRemark.nodes.slice(0, 2)
-
+  const posts = data.highlights.nodes.slice(0, 2)
   return (
     <HighlightContainer>
       <SectionTitle>Weekly Highlights</SectionTitle>

@@ -1,7 +1,7 @@
 backend:
   # name: git-gateway
   name: test-repo
-  branch: master
+  branch: main
 
 media_folder: static/img
 public_folder: /img
@@ -22,5 +22,6 @@ collections:
       - { label: "Image", name: "image", widget: "image" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Description", name: "description", widget: "string" }
+      - { label: "Highlight", name: "highlight", widget: "boolean" }
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Tags", name: "tags", widget: "list", default: ["message"] }

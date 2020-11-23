@@ -12,7 +12,6 @@ import {
   BlogPostCategory,
   HeadingContainer,
   H1,
-  Date,
   BlogPostBody,
   Footer,
   TagsWrapper,
@@ -22,6 +21,9 @@ import {
   Nav,
   NavItem,
 } from "./style"
+
+import { getSlug } from "../utils/getSlug"
+
 
 const tags = [
   "Organisation",
@@ -94,14 +96,14 @@ const BlogPostTemplate = ({ data }) => {
         <Nav>
           <NavItem>
             {previous && (
-              <Link to={previous.fields.slug} rel="prev">
+              <Link to={getSlug(previous.fields.slug)} rel="prev">
                 ← {previous.frontmatter.title}
               </Link>
             )}
           </NavItem>
           <NavItem>
             {next && (
-              <Link to={next.fields.slug} rel="next">
+              <Link to={getSlug(next.fields.slug)} rel="next">
                 {next.frontmatter.title} →
               </Link>
             )}

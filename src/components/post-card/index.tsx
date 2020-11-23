@@ -22,6 +22,8 @@ export const PostCard = ({ post }) => {
 
   const _description = post?.frontmatter?.description
   const formattedDescription = getDescription(_description)
+  const tags = post?.frontmatter?.tags
+
 
   return (
     <PostCardContainer>
@@ -37,7 +39,7 @@ export const PostCard = ({ post }) => {
             }}
           />
         </ImageContainer>
-        <PostCategory>Fintech</PostCategory>
+        <PostCategory>{tags?.[0]}</PostCategory>
         <PostTitle>
           <span itemProp="headline">{title}</span>
         </PostTitle>

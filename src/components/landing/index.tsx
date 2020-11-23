@@ -25,12 +25,13 @@ const Landing = () => {
 
   const _description = post?.frontmatter?.description
   const formattedDescription = getDescription(_description, 500)
+    const tags = post?.frontmatter?.tags
 
   return (
     <LandingContainer>
       <LandingFlex>
         <LandingContent>
-          <LandingCategory>Payment</LandingCategory>
+          <LandingCategory>{tags?.[0]}</LandingCategory>
           <LandingHeroText>
             <Link to={getSlug(post.fields.slug)}>{title}</Link>
           </LandingHeroText>
