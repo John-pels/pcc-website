@@ -4,7 +4,7 @@ export const FlexContainer = styled.section`
   display: flex;
   justify-content: space-between;
   width: 100%;
-  margin: 4rem 0;
+  margin: 2rem 0;
   font-family: ${({ theme }) => theme?.fontFamily?.normal};
 
   ${({ theme }) => theme?.media?.md} {

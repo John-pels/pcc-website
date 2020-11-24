@@ -6,6 +6,7 @@ import theme from "../theme"
 import { GlobalStyles } from "../theme/globalStyles"
 import Navbar from "./navbar"
 import { MarginalContainer } from "./container"
+import { SnackbarProvider } from "notistack"
 
 interface layouttype {
   title: string
@@ -18,11 +19,19 @@ const Layout = ({ title, children, location }: layouttype) => {
     <ThemeProvider theme={theme}>
       <GlobalStyles />
       <SEO title={title} />
-      <Navbar location={location} />
-      <MarginalContainer>
-        <main>{children}</main>
-      </MarginalContainer>
-      <Footer />
+      <SnackbarProvider
+        maxSnack={1}
+        anchorOrigin={{
+          vertical: "bottom",
+          horizontal: "right",
+        }}
+      >
+        <Navbar location={location} />
+        <MarginalContainer>
+          <main>{children}</main>
+        </MarginalContainer>
+        <Footer />
+      </SnackbarProvider>
     </ThemeProvider>
   )
 }

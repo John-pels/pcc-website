@@ -11,7 +11,8 @@ import {
   SubmitButton,
 } from "./style"
 import { InputTypes } from "./types"
-import { navigate } from "gatsby-link"
+import { Spinner } from "../spinner"
+import { useSnackbar } from "notistack"
 
 const INITIAL_STATE = {
   fullName: "",
@@ -28,6 +29,8 @@ const encode = (data: any) => {
 
 const ContactUs: FC = () => {
   const [input, setInput] = useState<InputTypes>(INITIAL_STATE)
+  const [isLoading, setIsLoading] = useState<boolean>(false)
+  const snackbar = useSnackbar()
 
   const FormInput = [
     {
@@ -61,7 +64,7 @@ const ContactUs: FC = () => {
 
   const handleSubmit = e => {
     e.preventDefault()
-    console.log(input)
+    setIsLoading(true)
     const form = e.target
     fetch("/", {
       method: "POST",
@@ -72,11 +75,27 @@ const ContactUs: FC = () => {
       }),
     })
       .then(() => {
-        // navigate(form.getAttribute("action"))
-        console.log("Submitted successfully!")
+        setIsLoading(false)
+        snackbar.enqueueSnackbar(
+          "We have received your message, you'll hear from us soon.",
+          {
+            variant: "success",
+            autoHideDuration: 3000,
+          }
+        )
         setInput({ ...INITIAL_STATE })
       })
-      .catch(error => alert(error))
+      .catch(error => {
+        alert(error)
+        setIsLoading(false)
+        snackbar.enqueueSnackbar(
+          "Something went wrong, please resend the message.",
+          {
+            variant: "error",
+            autoHideDuration: 3000,
+          }
+        )
+      })
   }
 
   return (
@@ -136,7 +155,9 @@ const ContactUs: FC = () => {
               id="message"
             />
           </InputGroup>
-          <SubmitButton type="submit">Send</SubmitButton>
+          <SubmitButton type="submit">
+            {isLoading ? <Spinner /> : "Send"}
+          </SubmitButton>
         </Form>
       </FlexContainer>
     </React.Fragment>
