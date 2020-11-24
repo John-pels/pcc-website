@@ -39,7 +39,7 @@ const Footer = () => {
           hic asperiores voluptatum laborum, animi eveniet et magni fugit
           perferendis quod sapiente explicabo doloribus molestias cupiditate
           quia blanditiis dolorum eum?
-          <SocialHeading>Follow us on our Social Media:</SocialHeading>
+          <SocialHeading>Follow us on Social Media:</SocialHeading>
           <SocialMedia>
             <a href="https://www.linkedin.com/in/ajeigbejohn/" target="_blank">
             <FaFacebookF/>
