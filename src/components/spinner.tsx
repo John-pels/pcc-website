@@ -17,7 +17,7 @@ export const Spinner = styled.div`
   border: 2px solid #fff;
   border-left-color: #7983ff;
   border-radius: 150%;
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   animation: Animation 1s ease-in-out infinite;
 `
