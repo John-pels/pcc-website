@@ -1,12 +1,12 @@
 import React from "react"
 import Layout from "../components/layout"
+import GallerySlider from "../components/gallery/index"
 
-const Gallery = () => {
+const Gallery = ({ location }) => {
   return (
-    <Layout title="Gallery">
-      <div></div>
+    <Layout title="Gallery" location={location}>
+      <GallerySlider />
     </Layout>
   )
 }
-
 export default Gallery

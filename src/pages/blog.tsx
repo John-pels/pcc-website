@@ -9,12 +9,12 @@ import {
   PostCardColumnExternal,
 } from "../components/container"
 
-const Blog = () => {
+const Blog = ({ location }) => {
   const data = getAllPosts()
   const posts = data.allMarkdownRemark.nodes
 
   return (
-    <Layout title="Blog">
+    <Layout title="Blog" location={location}>
       <Flex>
         {posts.map((post: any) => {
           return (

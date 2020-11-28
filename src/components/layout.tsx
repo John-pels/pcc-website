@@ -7,6 +7,7 @@ import { GlobalStyles } from "../theme/globalStyles"
 import Navbar from "./navbar"
 import { MarginalContainer } from "./container"
 import { SnackbarProvider } from "notistack"
+import ScrollToTop from "./scrollToTop"
 
 interface layouttype {
   title: string
@@ -30,6 +31,7 @@ const Layout = ({ title, children, location }: layouttype) => {
         <MarginalContainer>
           <main>{children}</main>
         </MarginalContainer>
+        <ScrollToTop location={location} />
         <Footer />
       </SnackbarProvider>
     </ThemeProvider>

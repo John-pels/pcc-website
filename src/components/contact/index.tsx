@@ -13,6 +13,7 @@ import {
 import { InputTypes } from "./types"
 import { Spinner } from "../spinner"
 import { useSnackbar } from "notistack"
+import { navigate } from "gatsby"
 
 const INITIAL_STATE = {
   fullName: "",
@@ -83,7 +84,9 @@ const ContactUs: FC = () => {
             autoHideDuration: 3000,
           }
         )
-        setInput({ ...INITIAL_STATE })
+        setTimeout(() => {
+          navigate("/")
+        }, 3000)
       })
       .catch(error => {
         alert(error)

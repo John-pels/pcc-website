@@ -33,12 +33,12 @@ const NotFoundContainer = styled.div`
   }
 `
 
-const NotFoundPage = () => {
+const NotFoundPage = ({ location }) => {
   const data = getPageInfo()
   const siteTitle = data.site.siteMetadata.title
 
   return (
-    <Layout title={siteTitle}>
+    <Layout title={siteTitle} location={location}>
       <SEO title="404: Not Found" />
       <NotFoundContainer>
         <div>
