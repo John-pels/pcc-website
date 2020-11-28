@@ -12,6 +12,16 @@ export const FlexContainer = styled.section`
   }
 `
 
+export const HeadingText = styled.h1`
+  font-family: ${({ theme }) => theme?.fontFamily?.heading};
+  text-align: center;
+  color: ${({ theme }) => theme?.colors?.primary};
+  margin: 2.5rem 0;
+  ${({ theme }) => theme?.media?.md} {
+    font-size: ${({ theme }) => theme?.fontSize?.custom(20)};
+  }
+`
+
 export const Form = styled.form`
   display: flex;
   justify-content: flex-start;

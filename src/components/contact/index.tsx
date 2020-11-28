@@ -9,6 +9,7 @@ import {
   FormHeading,
   TextArea,
   SubmitButton,
+  HeadingText,
 } from "./style"
 import { InputTypes } from "./types"
 import { Spinner } from "../spinner"
@@ -103,6 +104,7 @@ const ContactUs: FC = () => {
 
   return (
     <React.Fragment>
+      <HeadingText>Contact Us</HeadingText>
       <FlexContainer>
         <ContactDetails>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
