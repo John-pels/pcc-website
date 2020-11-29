@@ -71,7 +71,7 @@ module.exports = {
         short_name: `PCC`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#3462FB`,
+        theme_color: `#05A66B`,
         display: `minimal-ui`,
         icon: `content/assets/favicon.png`,
       },
