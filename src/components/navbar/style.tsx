@@ -6,7 +6,7 @@ export const NavbarContainer = styled(MarginalContainer)<{
   isNotHome: boolean
 }>`
   background-color: ${({ theme, hasScrolled }) =>
-    hasScrolled ? "#fff" : theme?.colors?.primary};
+    hasScrolled ? "#fff" : theme?.colors?.landingBg};
 
   background-color: ${({ isNotHome }) => isNotHome && "#fff"};
 
@@ -34,10 +34,7 @@ export const NavbarContainer = styled(MarginalContainer)<{
   }
 `
 
-export const NavbarLabel = styled.div<{
-  isOpen: boolean
-  hasScrolled?: boolean
-}>`
+export const NavbarLabel = styled.div<{ isOpen: boolean }>`
   transition: 0.2s;
 
   ${({ theme }) => theme?.media?.lg} {
@@ -73,8 +70,7 @@ export const NavbarLabel = styled.div<{
 
   a {
     text-decoration: none;
-    color: ${({ theme, hasScrolled }) =>
-      hasScrolled ? theme?.colors.primary : theme?.colors.white};
+    color: ${({ theme }) => theme?.colors.primary};
     font-family: ${({ theme }) => theme?.fontFamily?.heading};
     font-size: ${({ theme }) => theme?.fontSize?.custom(16)};
 
@@ -99,7 +95,7 @@ export const NavbarToggler = styled.div<{ isOpen: boolean }>`
   }
 `
 
-export const Toggler = styled.div<{ isOpen: boolean; hasScrolled?: boolean }>`
+export const Toggler = styled.div<{ isOpen: boolean }>`
   .icon-bar {
     display: block;
     width: 22px;
@@ -107,11 +103,7 @@ export const Toggler = styled.div<{ isOpen: boolean; hasScrolled?: boolean }>`
     border-radius: 1px;
     margin: 4px 0 4px 0;
     transition: all 0.2s;
-    background-color: ${({ theme, hasScrolled }) =>
-      hasScrolled ? theme?.colors?.primary : theme?.colors?.white};
-
-    background-color: ${({ theme, isOpen }) =>
-      isOpen && theme?.colors?.primary};
+    background-color: ${({ theme }) => theme?.colors?.primary};
 
     &:nth-of-type(1) {
       transform: ${({ isOpen }) => (isOpen ? "rotate(45deg)" : "rotate(0)")};
@@ -129,21 +121,13 @@ export const Toggler = styled.div<{ isOpen: boolean; hasScrolled?: boolean }>`
   }
 `
 
-export const NavbarFlex = styled.div<{
-  isOpen: boolean
-  hasScrolled?: boolean
-}>`
+export const NavbarFlex = styled.div<{ isOpen: boolean }>`
   display: flex;
   margin-left: 1rem;
-  background: ${({ theme, hasScrolled }) =>
-    !hasScrolled ? theme?.colors?.primary : theme?.colors.white};
   flex: 1;
   align-items: center;
-  color: ${({ theme, hasScrolled }) =>
-    hasScrolled ? theme?.colors?.primary : theme?.colors.white};
+
   ${({ theme }) => theme?.media?.lg} {
-    color: ${({ theme, isOpen }) =>
-      isOpen ? theme?.colors?.primary : theme?.colors.white};
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
@@ -170,14 +154,9 @@ export const NavbarFlex = styled.div<{
   }
 `
 
-export const NavbarFlexItem = styled.div<{
-  hasScrolled?: boolean
-  isOpen?: boolean
-}>`
+export const NavbarFlexItem = styled.div`
   letter-spacing: 0.07em;
-  color: ${({ theme, hasScrolled }) =>
-    hasScrolled ? theme?.colors.primary : theme?.colors.white};
-  color: ${({ theme, isOpen }) => isOpen && theme?.colors.primary};
+  color: ${({ theme }) => theme?.colors.primary};
   cursor: pointer;
   font-size: ${({ theme }) => theme?.fontSize?.navlink};
   padding: 0 30px;
@@ -244,7 +223,6 @@ export const NavbarFlexButtonContainer = styled.div`
 export const StartButton = styled.button`
   background-image: ${({ theme }) =>
     `linear-gradient(to bottom left, ${theme?.colors?.primary}, ${theme?.colors?.gold})`};
-  /* background-color: ${({ theme }) => theme?.colors?.hue}; */
   color: ${({ theme }) => theme?.colors?.white};
   font-family: ${({ theme }) => theme?.fontFamily?.heading};
   letter-spacing: 0.05em;
