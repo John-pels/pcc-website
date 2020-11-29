@@ -3,6 +3,7 @@ import Image from "gatsby-image"
 
 export const HighlightContainer = styled.div`
   margin-bottom: 3rem;
+  margin-top: -15rem;
 `
 
 export const HighlightFlex = styled.div`
