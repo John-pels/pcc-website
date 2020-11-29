@@ -76,7 +76,7 @@ const Footer = () => {
       <Copyright>
         © {new Date().getFullYear()}, Built with ❤️ by &nbsp;
         <a href="https://www.linkedin.com/in/ajeigbejohn/" target="_blank">
-          Ajeigbe John Oluwaseyi
+          Pels-Tech.
         </a>
       </Copyright>
     </FooterContainer>

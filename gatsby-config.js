@@ -1,12 +1,12 @@
 module.exports = {
   siteMetadata: {
-    title: `PCC Official Website`,
+    title: `PCC Intl.`,
     author: {
       name: `Pentecostal Church of Christ`,
       summary: `The Junction of the living God`,
     },
     description: `The Junction of the living God`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.app/`,
+    siteUrl: `http://pcc-intl.netlify.app/`,
     social: {
       twitter: `john_pels`,
     },
@@ -67,8 +67,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `FandK Savings Blog`,
-        short_name: `FandK`,
+        name: `PCC | Home`,
+        short_name: `PCC`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#3462FB`,
