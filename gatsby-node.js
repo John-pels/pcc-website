@@ -6,8 +6,6 @@ if (process.env.NODE_ENV === "development") {
 }
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
-
-  
   const { createPage } = actions
 
   // Define a template for blog post
@@ -52,7 +50,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       const nextPostId = index === posts.length - 1 ? null : posts[index + 1].id
 
       createPage({
-        path: "/blog" + post.fields.slug.replace(" ", "-"),
+        path: "/messages" + post.fields.slug.replace(" ", "-"),
         component: blogPost,
         context: {
           id: post.id,

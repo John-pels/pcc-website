@@ -9,19 +9,25 @@ import {
   DetailText,
   DetailsContainer,
   SocialMedia,
-  SocialHeading
+  SocialHeading,
 } from "./style"
-import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt, FaTwitter, FaFacebookF, FaInstagram } from "react-icons/fa"
-
+import {
+  FaEnvelope,
+  FaPhoneAlt,
+  FaMapMarkerAlt,
+  FaTwitter,
+  FaFacebookF,
+  FaInstagram,
+} from "react-icons/fa"
 
 const details = [
   {
     icon: FaEnvelope,
-    text: "oluseyiajeigbe@yahoo.com",
+    text: "pccorgintl@yahoo.com",
   },
   {
     icon: FaPhoneAlt,
-    text: "+2348188974303, +2348132815396",
+    text: "+2348188888888, +2348133333333",
   },
 
   {
@@ -42,13 +48,13 @@ const Footer = () => {
           <SocialHeading>Follow us on Social Media:</SocialHeading>
           <SocialMedia>
             <a href="https://www.linkedin.com/in/ajeigbejohn/" target="_blank">
-            <FaFacebookF/>
+              <FaFacebookF />
             </a>
             <a href="https://www.linkedin.com/in/ajeigbejohn/" target="_blank">
-             <FaTwitter/>
+              <FaTwitter />
             </a>
             <a href="https://www.linkedin.com/in/ajeigbejohn/" target="_blank">
-             <FaInstagram/>
+              <FaInstagram />
             </a>
           </SocialMedia>
         </FooterBrief>

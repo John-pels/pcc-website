@@ -13,11 +13,13 @@ import AllPost from "../components/all-post"
 
 const Home = ({ location }) => {
   return (
-    <Layout title="Home" location={location}>
-      <Landing />
-      <Highlight />
-      <AllPost />
-    </Layout>
+    <React.Fragment>
+      <Layout title="Home" location={location} showHeader={true}>
+        <Landing />
+        <Highlight />
+        <AllPost />
+      </Layout>
+    </React.Fragment>
   )
 }
 

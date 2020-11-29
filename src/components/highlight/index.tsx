@@ -20,7 +20,7 @@ const Highlight = () => {
   const posts = data.highlights.nodes.slice(0, 2)
   return (
     <HighlightContainer>
-      <SectionTitle>Weekly Highlights</SectionTitle>
+      <SectionTitle>Weekly Messages</SectionTitle>
       <HighlightFlex>
         {posts.map(post => {
           const title = post.frontmatter.title

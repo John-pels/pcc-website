@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import Image from "gatsby-image"
 
 export const SliderContainer = styled.section`
   display: flex;

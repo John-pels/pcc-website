@@ -51,6 +51,7 @@ export const ContactDetails = styled.div`
 
 export const FormHeading = styled.h3`
   font-size: ${({ theme }) => theme?.fontSize?.custom(22)};
+  color: ${({ theme }) => theme?.colors?.hue};
   text-align: center;
   padding: 1rem 0;
 `
@@ -105,7 +106,7 @@ export const SubmitButton = styled.button`
   color: ${({ theme }) => theme?.colors?.white};
   outline: none;
   background-image: ${({ theme }) =>
-    `linear-gradient(to bottom left, ${theme?.colors?.primary}, ${theme?.colors?.purple})`};
+    `linear-gradient(to bottom left, ${theme?.colors?.primary}, ${theme?.colors?.gold})`};
   cursor: pointer;
   box-shadow: 0px 0px 5px 0px transparent;
   transition: 0.3s;

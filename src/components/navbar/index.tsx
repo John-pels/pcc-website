@@ -8,13 +8,14 @@ import {
   NavbarFlex,
   NavbarFlexButtonContainer,
   NavbarFlexButton,
+  BrandText,
 } from "./style"
 import { Large, Small } from "../responsive"
 import images from "../../assets/svg"
 import NavItem from "./navItem"
 import { NavItemsTypes } from "./types"
 
-const { logo, logoLg } = images
+// const { logo, logoLg } = images
 
 interface NavbarTypes {
   location: any
@@ -30,8 +31,8 @@ const items: NavItemsTypes[] = [
     path: "/gallery",
   },
   {
-    name: "Blog",
-    path: "/blog",
+    name: "Messages",
+    path: "/messages",
   },
 ]
 
@@ -90,14 +91,15 @@ const Navbar = ({ location }: NavbarTypes) => {
   const isNotHome = router !== "/"
   return (
     <NavbarContainer hasScrolled={hasScrolled} isNotHome={isNotHome}>
-      <NavbarLabel isOpen={isOpen}>
+      <NavbarLabel isOpen={isOpen} hasScrolled={hasScrolled}>
         <Link to="/">
-          <Large as="img" src={logoLg} />
-          <Small as="img" src={logo} />
+          <BrandText>P.C.C</BrandText>
+          {/* <Large as="img" src={logoLg} />
+          <Small as="img" src={logo} /> */}
         </Link>
         <Small>
           <NavbarToggler isOpen={isOpen} onClick={handleToggle}>
-            <Toggler isOpen={isOpen}>
+            <Toggler isOpen={isOpen} hasScrolled={hasScrolled}>
               <div className="icon-bar" />
               <div className="icon-bar" />
               <div className="icon-bar" />
@@ -105,13 +107,17 @@ const Navbar = ({ location }: NavbarTypes) => {
           </NavbarToggler>
         </Small>
       </NavbarLabel>
-      <NavbarFlex isOpen={isOpen}>
+      <NavbarFlex isOpen={isOpen} hasScrolled={hasScrolled}>
         {items.map((item, index) => (
-          <NavItem item={item} key={index} />
+          <NavItem
+            item={item}
+            key={index}
+            hasScrolled={hasScrolled}
+            isOpen={isOpen}
+          />
         ))}
 
         <NavbarFlexButtonContainer>
-        
           <Link to="/contact">
             <NavbarFlexButton>Contact Us</NavbarFlexButton>
           </Link>

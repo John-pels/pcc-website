@@ -3,10 +3,10 @@
  */
 
 const colors = {
-  primary: "#3462FB",
+  primary: "#05A66B",
   white: "#FFF",
-  purple: "#8a4ef1",
-  hue: "hsla(0,0%,0%,0.8)",
+  gold: "#F2D680",
+  hue: "hsla(0,0%,0%,0.6)",
 }
 
 /**

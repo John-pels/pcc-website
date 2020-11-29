@@ -43,7 +43,7 @@ export const PostCardColumn = styled.div`
 export const SectionTitle = styled.h2`
   margin: 2rem 0;
   font-family: ${({ theme }) => theme?.fontFamily?.normal};
-  color: rgba(0, 0, 0, 0.8);
+  color: ${({ theme }) => theme?.colors?.hue};
   font-size: ${({ theme }) => theme?.fontSize?.custom(19)};
 
   padding: 0 13px;
