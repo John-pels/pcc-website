@@ -24,7 +24,7 @@ const Cursor = styled.span`
 `
 
 const period = 2500
-const interval = 50
+const interval = 100
 const startUpDelay = 1500
 let timeout
 
