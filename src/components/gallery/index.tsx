@@ -64,7 +64,10 @@ const GallerySlider = () => {
         </Swiper>
       </ThumbSection>
 
-      <MoreAnchorTag href="https://twitter.com" target="_blank">
+      <MoreAnchorTag
+        href="https://drive.google.com/drive/folders/1G4D6uB4xVEQqWDyGPl1VIKzeedE_ZqUH"
+        target="_blank"
+      >
         View more photos &nbsp; <FaArrowCircleRight />
       </MoreAnchorTag>
     </SliderContainer>

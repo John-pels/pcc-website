@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `PCC Intl.`,
     author: {
-      name: `Pentecostal Church of Christ`,
+      name: `Pentecostal Church of Christ International`,
       summary: `The Junction of the living God`,
     },
     description: `The Junction of the living God`,

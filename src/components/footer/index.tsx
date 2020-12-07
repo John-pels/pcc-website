@@ -23,16 +23,16 @@ import {
 const details = [
   {
     icon: FaEnvelope,
-    text: "pccorgintl@yahoo.com",
+    text: "Pentecostalcfc@yahoo.com",
   },
   {
     icon: FaPhoneAlt,
-    text: "+2348188888888, +2348133333333",
+    text: "+2348034060044, +2348024307774",
   },
 
   {
     icon: FaMapMarkerAlt,
-    text: "Ijora-badia, Lagos State, Nigeria.",
+    text: "No. 13 Odunuga str. Ijora-badia, Lagos State, Nigeria.",
   },
 ]
 
