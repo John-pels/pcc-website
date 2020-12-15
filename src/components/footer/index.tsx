@@ -23,7 +23,7 @@ import {
 const details = [
   {
     icon: FaEnvelope,
-    text: "Pentecostalcfc@yahoo.com",
+    text: "Pccinternational28@gmail.com",
   },
   {
     icon: FaPhoneAlt,
