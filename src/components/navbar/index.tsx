@@ -91,7 +91,7 @@ const Navbar = ({ location }: NavbarTypes) => {
   const isNotHome = router !== "/"
   return (
     <NavbarContainer hasScrolled={hasScrolled} isNotHome={isNotHome}>
-      <NavbarLabel isOpen={isOpen} hasScrolled={hasScrolled}>
+      <NavbarLabel isOpen={isOpen}>
         <Link to="/">
           <BrandText>P.C.C</BrandText>
           {/* <Large as="img" src={logoLg} />
@@ -99,7 +99,7 @@ const Navbar = ({ location }: NavbarTypes) => {
         </Link>
         <Small>
           <NavbarToggler isOpen={isOpen} onClick={handleToggle}>
-            <Toggler isOpen={isOpen} hasScrolled={hasScrolled}>
+            <Toggler isOpen={isOpen}>
               <div className="icon-bar" />
               <div className="icon-bar" />
               <div className="icon-bar" />
@@ -107,7 +107,7 @@ const Navbar = ({ location }: NavbarTypes) => {
           </NavbarToggler>
         </Small>
       </NavbarLabel>
-      <NavbarFlex isOpen={isOpen} hasScrolled={hasScrolled}>
+      <NavbarFlex isOpen={isOpen}>
         {items.map((item, index) => (
           <NavItem
             item={item}

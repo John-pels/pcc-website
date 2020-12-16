@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import Image from "gatsby-image"
+import Image, { FluidObject } from "gatsby-image"
 
 export const LandingContainer = styled.div`
   padding: 0 13px;
@@ -67,7 +67,7 @@ export const LandingImage = styled.div`
   }
 `
 
-export const _Image = styled(Image)`
+export const _Image = styled(Image)<{ fluid: FluidObject }>`
   width: 100%;
   height: 100%;
   border-radius: 20px;

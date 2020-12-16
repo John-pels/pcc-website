@@ -25,7 +25,7 @@ const Landing = () => {
 
   const _description = post?.frontmatter?.description
   const formattedDescription = getDescription(_description, 500)
-    const tags = post?.frontmatter?.tags
+  const tags = post?.frontmatter?.tags
 
   return (
     <LandingContainer>

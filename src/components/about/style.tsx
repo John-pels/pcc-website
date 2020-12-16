@@ -21,10 +21,7 @@ export const Heading = styled.h3`
 `
 export const Paragraph = styled.article`
   color: ${({ theme }) => theme?.colors?.hue};
-  letter-spacing: 0.1rem;
-  line-height: 25px;
-
-  ${({ theme }) => theme?.media?.md} {
-    font-size: ${({ theme }) => theme?.fontSize?.custom(14)};
-  }
+  letter-spacing: 0.06rem;
+  line-height: 15px;
+  font-size: ${({ theme }) => theme?.fontSize?.custom(14)};
 `

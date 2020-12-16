@@ -24,7 +24,6 @@ export const PostCard = ({ post }) => {
   const formattedDescription = getDescription(_description)
   const tags = post?.frontmatter?.tags
 
-
   return (
     <PostCardContainer>
       <Link to={getSlug(post.fields.slug)} itemProp="url">

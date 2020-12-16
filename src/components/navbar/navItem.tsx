@@ -9,9 +9,12 @@ type itemType = {
   isOpen?: boolean
 }
 const NavItem = ({ item, hasScrolled, isOpen }: itemType) => {
+  const router: string = location?.pathname
+  const isNotHome = router !== "/"
+
   return (
-    <NavbarFlexItem hasScrolled={hasScrolled} isOpen={isOpen}>
-      <Link to={item.path}>
+    <NavbarFlexItem hS={hasScrolled} iNH={isNotHome}>
+      <Link activeClassName="active" to={item.path}>
         <span>{item.name}</span>
       </Link>
     </NavbarFlexItem>

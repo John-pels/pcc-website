@@ -7,6 +7,8 @@ const colors = {
   white: "#FFF",
   gold: "#F2D680",
   hue: "hsla(0,0%,0%,0.6)",
+  navlink: "#4b4b4b",
+  navlinkAlt: "#ccc",
 }
 
 /**
@@ -83,7 +85,7 @@ const fontFamily = {
   /**
    * normal font family
    */
-  normal: "Comfortaa, cursive",
+  normal: "Roboto, sans-serif",
   /**
    * font family for headers
    */

@@ -18,10 +18,10 @@ export const NavbarContainer = styled(MarginalContainer)<{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
-  max-width: 100%;
+  width: 100%;
   z-index: 50;
   transition: background-color 0.3s, box-shadow 0.3s;
 
@@ -61,7 +61,7 @@ export const NavbarLabel = styled.div<{ isOpen: boolean }>`
 
   z-index: 22;
 
-  width: 170px;
+  width: 120px;
 
   img {
     width: 100%;
@@ -154,12 +154,23 @@ export const NavbarFlex = styled.div<{ isOpen: boolean }>`
   }
 `
 
-export const NavbarFlexItem = styled.div`
+/**
+ * @param hS hasScrolled
+ * @param iNH isNotHome
+ *
+ */
+
+export const NavbarFlexItem = styled.div<{ hS?: boolean; iNH?: boolean }>`
   letter-spacing: 0.07em;
-  color: ${({ theme }) => theme?.colors.primary};
+  color: ${({ hS, iNH, theme }) =>
+    iNH
+      ? theme?.colors?.navlink
+      : hS
+      ? theme?.colors?.navlink
+      : theme?.colors?.navlinkAlt};
   cursor: pointer;
-  font-size: ${({ theme }) => theme?.fontSize?.navlink};
-  padding: 0 30px;
+  font-size: ${({ theme }) => theme?.fontSize?.custom(13)};
+  padding: 0 20px;
 
   ${({ theme }) => theme?.media?.lg} {
     cursor: default;
@@ -170,9 +181,6 @@ export const NavbarFlexItem = styled.div`
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    span {
-      font-size: 19px;
-    }
   }
 
   a {
@@ -183,8 +191,12 @@ export const NavbarFlexItem = styled.div`
     font-weight: 600;
 
     &:hover {
-      color: ${({ theme }) => theme?.colors.gold};
+      color: ${({ theme }) => theme?.colors.primary};
     }
+  }
+
+  .active {
+    color: ${({ theme }) => theme?.colors?.primary};
   }
 `
 
@@ -221,8 +233,9 @@ export const NavbarFlexButtonContainer = styled.div`
 `
 
 export const StartButton = styled.button`
-  background-image: ${({ theme }) =>
-    `linear-gradient(to bottom left, ${theme?.colors?.primary}, ${theme?.colors?.gold})`};
+  /* background-image: ${({ theme }) =>
+    `linear-gradient(to bottom left, ${theme?.colors?.primary}, ${theme?.colors?.gold})`}; */
+  background-color: ${({ theme }) => theme?.colors?.primary};
   color: ${({ theme }) => theme?.colors?.white};
   font-family: ${({ theme }) => theme?.fontFamily?.heading};
   letter-spacing: 0.05em;
