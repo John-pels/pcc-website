@@ -9,8 +9,6 @@ export const FooterContainer = styled(MarginalContainer)`
   padding: 4rem 5rem;
   width: 100%;
 
-  /* clip-path: polygon(0% 0%, 100% 20%, 100% 100%, 0 100%); */
-
   ${({ theme }) => theme?.media?.md} {
     padding: 1rem;
   }
@@ -36,6 +34,15 @@ export const FooterBrief = styled.form`
   ${({ theme }) => theme?.media?.custom(840)} {
     width: 100%;
   }
+`
+export const ImageWrapper = styled.div`
+  width: 50%;
+  height: 300px;
+`
+export const Image = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: center;
 `
 
 export const DetailsContainer = styled.section`
