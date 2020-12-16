@@ -39,6 +39,12 @@ export const ContactDetails = styled.div`
   }
 `
 
+export const Image = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: center;
+`
+
 export const FormHeading = styled.h3`
   font-size: ${({ theme }) => theme?.fontSize?.custom(22)};
   color: ${({ theme }) => theme?.colors?.hue};
@@ -54,7 +60,7 @@ export const InputField = styled.input`
   outline: none;
   transition: 0.3s;
   margin: 1rem 0;
-  border: ${({ theme }) => `2px solid ${theme?.colors?.hue}`};
+  border: ${({ theme }) => `1px solid ${theme?.colors?.hue}`};
   border-radius: 5px;
 
   &::placeholder {

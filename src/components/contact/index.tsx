@@ -9,11 +9,15 @@ import {
   FormHeading,
   TextArea,
   SubmitButton,
+  Image,
 } from "./style"
 import { InputTypes } from "./types"
 import { Spinner } from "../spinner"
 import { useSnackbar } from "notistack"
 import { navigate } from "gatsby"
+import images from "../../assets/svg"
+
+const { Contact } = images
 
 const INITIAL_STATE = {
   fullName: "",
@@ -33,12 +37,15 @@ const ContactUs: FC = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false)
   const snackbar = useSnackbar()
 
+  const { fullName, phoneNumber, address, message } = input
+
   const FormInput = [
     {
       type: "text",
       placeholder: "Full Name",
       label: "Full Name",
       name: "fullName",
+      value: fullName,
       onChange: e => handleChange(e),
     },
     {
@@ -46,6 +53,7 @@ const ContactUs: FC = () => {
       placeholder: "Phone Number",
       label: "Phone Number",
       name: "phoneNumber",
+      value: phoneNumber,
       onChange: e => handleChange(e),
     },
     {
@@ -53,6 +61,7 @@ const ContactUs: FC = () => {
       placeholder: "Resident Address",
       label: "Resident Address",
       name: "address",
+      value: address,
       onChange: e => handleChange(e),
     },
   ]
@@ -76,6 +85,7 @@ const ContactUs: FC = () => {
       }),
     })
       .then(() => {
+        setInput(INITIAL_STATE)
         setIsLoading(false)
         snackbar.enqueueSnackbar(
           "We have received your message, you'll hear from us soon.",
@@ -105,13 +115,7 @@ const ContactUs: FC = () => {
     <React.Fragment>
       <FlexContainer>
         <ContactDetails>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
-          explicabo iste odit voluptates voluptas ut eaque consequuntur cumque
-          est recusandae, quod qui inventore dolor consequatur, numquam quisquam
-          minus, id ad! Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Fuga explicabo iste odit voluptates voluptas ut eaque consequuntur
-          cumque est recusandae, quod qui inventore dolor consequatur, numquam
-          quisquam minus, id ad!
+          <Image src={Contact} alt="contact us" />
         </ContactDetails>
         <Form
           name="contact"
@@ -142,6 +146,7 @@ const ContactUs: FC = () => {
                       name={input.name}
                       id={input.name}
                       onChange={input.onChange}
+                      value={input.value}
                     />
                   </InputGroup>
                 )
@@ -155,6 +160,7 @@ const ContactUs: FC = () => {
               placeholder="Resident address"
               name="message"
               onChange={handleChange}
+              value={message}
               id="message"
             />
           </InputGroup>
