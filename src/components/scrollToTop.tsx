@@ -39,8 +39,6 @@ const ScrollToTop = ({ location }: any) => {
   }
 
   const router = location
-  console.log("This is the route", router)
-
   useEffect(() => {
     if (router?.pathname === undefined) {
       setDisable(false)

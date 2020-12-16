@@ -23,7 +23,7 @@ import {
 const details = [
   {
     icon: FaEnvelope,
-    text: "Pccinternational28@gmail.com",
+    text: "pccinternational@pccintl.org,",
   },
   {
     icon: FaPhoneAlt,
@@ -47,13 +47,16 @@ const Footer = () => {
           quia blanditiis dolorum eum?
           <SocialHeading>Follow us on Social Media:</SocialHeading>
           <SocialMedia>
-            <a href="https://www.linkedin.com/in/ajeigbejohn/" target="_blank">
+            <a
+              href="https://web.facebook.com/groups/332246887472748"
+              target="_blank"
+            >
               <FaFacebookF />
             </a>
-            <a href="https://www.linkedin.com/in/ajeigbejohn/" target="_blank">
+            <a href="#" target="_blank">
               <FaTwitter />
             </a>
-            <a href="https://www.linkedin.com/in/ajeigbejohn/" target="_blank">
+            <a href="#" target="_blank">
               <FaInstagram />
             </a>
           </SocialMedia>
