@@ -61,7 +61,7 @@ export const NavbarLabel = styled.div<{ isOpen: boolean }>`
 
   z-index: 22;
 
-  width: 170px;
+  width: 120px;
 
   img {
     width: 100%;
@@ -154,12 +154,23 @@ export const NavbarFlex = styled.div<{ isOpen: boolean }>`
   }
 `
 
-export const NavbarFlexItem = styled.div<{ hasScrolled?: boolean }>`
+/**
+ * @param hS hasScrolled
+ * @param iNH isNotHome
+ *
+ */
+
+export const NavbarFlexItem = styled.div<{ hS?: boolean; iNH?: boolean }>`
   letter-spacing: 0.07em;
-  color: ${({ hasScrolled }) => (hasScrolled ? "#4b4b4b" : "#ccc")};
+  color: ${({ hS, iNH, theme }) =>
+    iNH
+      ? theme?.colors?.navlink
+      : hS
+      ? theme?.colors?.navlink
+      : theme?.colors?.navlinkAlt};
   cursor: pointer;
   font-size: ${({ theme }) => theme?.fontSize?.custom(13)};
-  padding: 0 30px;
+  padding: 0 20px;
 
   ${({ theme }) => theme?.media?.lg} {
     cursor: default;
@@ -170,9 +181,6 @@ export const NavbarFlexItem = styled.div<{ hasScrolled?: boolean }>`
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    span {
-      font-size: 19px;
-    }
   }
 
   a {
@@ -183,8 +191,12 @@ export const NavbarFlexItem = styled.div<{ hasScrolled?: boolean }>`
     font-weight: 600;
 
     &:hover {
-      color: ${({ theme }) => theme?.colors.gold};
+      color: ${({ theme }) => theme?.colors.primary};
     }
+  }
+
+  .active {
+    color: ${({ theme }) => theme?.colors?.primary};
   }
 `
 
