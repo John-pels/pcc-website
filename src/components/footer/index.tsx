@@ -10,6 +10,8 @@ import {
   DetailsContainer,
   SocialMedia,
   SocialHeading,
+  Image,
+  ImageWrapper,
 } from "./style"
 import {
   FaEnvelope,
@@ -19,11 +21,14 @@ import {
   FaFacebookF,
   FaInstagram,
 } from "react-icons/fa"
+import images from "../../assets/svg"
+
+const { BrandLogo } = images
 
 const details = [
   {
     icon: FaEnvelope,
-    text: "pccinternational@pccintl.org,",
+    text: "pccinternational@pccintl.org",
   },
   {
     icon: FaPhoneAlt,
@@ -41,10 +46,9 @@ const Footer = () => {
     <FooterContainer>
       <FooterFlex>
         <FooterBrief>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis tempore
-          hic asperiores voluptatum laborum, animi eveniet et magni fugit
-          perferendis quod sapiente explicabo doloribus molestias cupiditate
-          quia blanditiis dolorum eum?
+          <ImageWrapper>
+            <Image src={BrandLogo} alt="logo" />
+          </ImageWrapper>
           <SocialHeading>Follow us on Social Media:</SocialHeading>
           <SocialMedia>
             <a
