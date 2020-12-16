@@ -7,8 +7,9 @@ type itemType = {
   item: NavItemsTypes
   hasScrolled?: boolean
   isOpen?: boolean
+  location?: any
 }
-const NavItem = ({ item, hasScrolled, isOpen }: itemType) => {
+const NavItem = ({ item, hasScrolled, isOpen, location }: itemType) => {
   const router: string = location?.pathname
   const isNotHome = router !== "/"
 

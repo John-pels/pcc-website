@@ -14,7 +14,7 @@ const Heading = styled.h3`
   font-family: ${({ theme }) => theme?.fontFamily?.heading};
   text-align: center;
   color: ${({ theme }) => theme?.colors?.primary};
-  margin: 3.5rem 0;
+  margin: 6.5rem 0;
   font-size: ${({ theme }) => theme?.fontSize?.custom(28)};
 
   ${({ theme }) => theme?.media?.md} {

@@ -6,7 +6,7 @@ module.exports = {
       summary: `The Junction of the living God`,
     },
     description: `The Junction of the living God`,
-    siteUrl: `http://pcc-intl.netlify.app/`,
+    siteUrl: `https://pccintl.org/`,
     social: {
       twitter: `john_pels`,
     },
@@ -67,7 +67,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `PCC | Home`,
+        name: `Pentecostal Church of Christ | Home`,
         short_name: `PCC`,
         start_url: `/`,
         background_color: `#ffffff`,

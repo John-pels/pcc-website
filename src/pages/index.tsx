@@ -7,8 +7,11 @@ import AllPost from "../components/all-post"
 const Home = ({ location }) => {
   return (
     <React.Fragment>
-      <Layout title="Home" location={location} showHeader={true}>
-        {/* <Landing /> */}
+      <Layout
+        title="Pentecostal Church of Christ"
+        location={location}
+        showHeader={true}
+      >
         <Highlight />
         <AllPost />
       </Layout>

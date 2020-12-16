@@ -114,6 +114,7 @@ const Navbar = ({ location }: NavbarTypes) => {
             key={index}
             hasScrolled={hasScrolled}
             isOpen={isOpen}
+            location={location}
           />
         ))}
 
