@@ -1,9 +1,8 @@
 import styled from "styled-components"
-import Image from "gatsby-image"
+import Image, { FluidObject } from "gatsby-image"
 
 export const HighlightContainer = styled.div`
   margin-bottom: 3rem;
-  margin-top: -15rem;
 `
 
 export const HighlightFlex = styled.div`
@@ -31,7 +30,7 @@ export const HighlightCardContainer = styled.div`
   }
 `
 
-export const HightlightCardImage = styled(Image)`
+export const HightlightCardImage = styled(Image)<{ fluid: FluidObject }>`
   height: 300px;
   object-fit: cover;
   border-radius: 6px;
@@ -57,7 +56,7 @@ export const HighlightCardDescription = styled.p`
   margin-bottom: 1.5rem;
 
   color: ${({ theme }) => theme?.colors?.hue};
-  font-size: ${({ theme }) => theme?.fontSize?.small};
+  font-size: ${({ theme }) => theme?.fontSize?.custom(13)};
   line-height: 21px;
 `
 export const HighlightCardTTL = styled.p`

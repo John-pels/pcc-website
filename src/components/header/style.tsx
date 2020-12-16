@@ -1,6 +1,7 @@
 import styled, { keyframes } from "styled-components"
 import images from "../../assets/svg"
 import { MarginalContainer } from "../container"
+import Image, { FluidObject } from "gatsby-image"
 const { waveBg } = images
 
 export const HeroAnimation = keyframes`
@@ -13,6 +14,23 @@ export const HeroAnimation = keyframes`
         opacity: 1;
 
     }
+`
+
+export const HeroImageContainer = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+`
+
+export const HeroImage = styled(Image)<{ fluid: FluidObject }>`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.5);
 `
 
 export const TaglineAnimation = keyframes`
@@ -41,19 +59,25 @@ export const TaglineAnimation = keyframes`
   
 `
 
-export const HeaderContainer = styled(MarginalContainer)`
+export const HeaderContainer = styled.div`
   display: flex;
-  flex-flow: column;
-  min-height: 120vh;
-  max-width: 100%;
+  height: 80vh;
+  width: 100%;
   overflow-x: hidden;
   color: ${({ theme }) => theme?.colors?.white};
-  background: url(${waveBg}) no-repeat;
-  background-position: center;
-  background-size: cover;
   text-align: center;
+  position: relative;
+
+  justify-content: center;
+  align-items: center;
+`
+
+export const HeroContent = styled.div`
+  z-index: 3;
+  padding: 0 2rem;
 
   ${({ theme }) => theme?.media?.md} {
+    padding: 0 1rem;
   }
 `
 

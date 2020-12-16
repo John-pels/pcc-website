@@ -18,10 +18,10 @@ export const NavbarContainer = styled(MarginalContainer)<{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
-  max-width: 100%;
+  width: 100%;
   z-index: 50;
   transition: background-color 0.3s, box-shadow 0.3s;
 
@@ -154,11 +154,11 @@ export const NavbarFlex = styled.div<{ isOpen: boolean }>`
   }
 `
 
-export const NavbarFlexItem = styled.div`
+export const NavbarFlexItem = styled.div<{ hasScrolled?: boolean }>`
   letter-spacing: 0.07em;
-  color: ${({ theme }) => theme?.colors.primary};
+  color: ${({ hasScrolled }) => (hasScrolled ? "#4b4b4b" : "#ccc")};
   cursor: pointer;
-  font-size: ${({ theme }) => theme?.fontSize?.navlink};
+  font-size: ${({ theme }) => theme?.fontSize?.custom(13)};
   padding: 0 30px;
 
   ${({ theme }) => theme?.media?.lg} {
@@ -221,8 +221,9 @@ export const NavbarFlexButtonContainer = styled.div`
 `
 
 export const StartButton = styled.button`
-  background-image: ${({ theme }) =>
-    `linear-gradient(to bottom left, ${theme?.colors?.primary}, ${theme?.colors?.gold})`};
+  /* background-image: ${({ theme }) =>
+    `linear-gradient(to bottom left, ${theme?.colors?.primary}, ${theme?.colors?.gold})`}; */
+  background-color: ${({ theme }) => theme?.colors?.primary};
   color: ${({ theme }) => theme?.colors?.white};
   font-family: ${({ theme }) => theme?.fontFamily?.heading};
   letter-spacing: 0.05em;

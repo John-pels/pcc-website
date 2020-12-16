@@ -24,7 +24,7 @@ export const PostCardColumnExternal = styled.div`
   width: 25%;
   padding: 0 13px;
 
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 
   ${({ theme }) => theme?.media?.md} {
     width: 100%;

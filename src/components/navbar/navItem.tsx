@@ -10,7 +10,7 @@ type itemType = {
 }
 const NavItem = ({ item, hasScrolled, isOpen }: itemType) => {
   return (
-    <NavbarFlexItem hasScrolled={hasScrolled} isOpen={isOpen}>
+    <NavbarFlexItem hasScrolled={hasScrolled}>
       <Link to={item.path}>
         <span>{item.name}</span>
       </Link>

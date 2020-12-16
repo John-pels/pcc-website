@@ -23,12 +23,13 @@ export const ImageContainer = styled.div`
 export const PostCategory = styled.p`
   font-size: 10px;
   text-transform: uppercase;
+  margin: 0;
   margin-top: 1.5rem;
   color: ${({ theme }) => theme?.colors?.hue};
 `
 
 export const PostTitle = styled.h3`
-  margin: 1rem 0;
+  margin: 0.5rem 0;
   /* min-height: 40px; */
   color: ${({ theme }) => theme?.colors?.primary};
   font-size: ${({ theme }) => theme?.fontSize?.custom(17)};
@@ -39,7 +40,7 @@ export const DesciptionContainer = styled.div``
 
 export const PostDescription = styled.article`
   color: ${({ theme }) => theme?.colors?.hue};
-  font-size: ${({ theme }) => theme?.fontSize?.small};
+  font-size: ${({ theme }) => theme?.fontSize?.custom(13)};
   line-height: 21px;
   margin-bottom: 1rem;
 `

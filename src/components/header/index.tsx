@@ -1,7 +1,16 @@
 import React from "react"
-import { HeaderContainer, HeroText, Tagline, TypeText } from "./style"
+import {
+  HeaderContainer,
+  HeroContent,
+  HeroImage,
+  HeroImageContainer,
+  HeroText,
+  Tagline,
+  TypeText,
+} from "./style"
 import TypeWriter from "../typeWriter"
 import Wave from "../wave"
+import { getHero } from "../../query/getHero"
 
 const texts = [
   " For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life. - John 3:16",
@@ -10,20 +19,27 @@ const texts = [
 ]
 
 const LandingComponent = () => {
+  const data = getHero()
+  const image = data?.avatar?.childImageSharp?.fluid
   return (
-    <React.Fragment>
+    <>
       <HeaderContainer>
-        <HeroText>Pentecostal Church of Christ</HeroText>
-        <Tagline> - the junction of the living God!</Tagline>
-        <TypeText>
-          {" "}
-          <Wave>
-            <span aria-hidden>✍️</span>
-          </Wave>
-          <TypeWriter texts={texts} />
-        </TypeText>
+        <HeroImageContainer>
+          <HeroImage fluid={image} />
+        </HeroImageContainer>
+        <HeroContent>
+          <HeroText>Pentecostal Church of Christ</HeroText>
+          <Tagline> - The Junction of the Living God!</Tagline>
+          <TypeText>
+            {" "}
+            <Wave>
+              <span aria-hidden>✍️</span>
+            </Wave>
+            <TypeWriter texts={texts} />
+          </TypeText>
+        </HeroContent>
       </HeaderContainer>
-    </React.Fragment>
+    </>
   )
 }
 
