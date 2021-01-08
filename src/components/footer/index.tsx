@@ -1,4 +1,5 @@
 import React from "react"
+
 import {
   FooterContainer,
   Copyright,
@@ -12,6 +13,7 @@ import {
   SocialHeading,
   Image,
   ImageWrapper,
+  AnchorTag,
 } from "./style"
 import {
   FaEnvelope,
@@ -29,15 +31,18 @@ const details = [
   {
     icon: FaEnvelope,
     text: "pccinternational@pccintl.org",
+    linkPrefix: "mailto:pccinternational@pccintl.org",
   },
   {
     icon: FaPhoneAlt,
     text: "+2348034060044, +2348024307774",
+    linkPrefix: "tel:+2348034060044",
   },
 
   {
     icon: FaMapMarkerAlt,
     text: "No. 13 Odunuga str. Ijora-badia, Lagos State, Nigeria.",
+    linkPrefix: "#",
   },
 ]
 
@@ -73,7 +78,9 @@ const Footer = () => {
                     <DetailIcon>
                       <detail.icon />
                     </DetailIcon>
-                    <DetailText>{detail.text}</DetailText>
+                    <AnchorTag href={detail.linkPrefix} target="_blank">
+                      <DetailText>{detail.text}</DetailText>
+                    </AnchorTag>
                   </InquiryDetails>
                 )
               })
