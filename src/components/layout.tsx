@@ -17,6 +17,9 @@ interface layouttype {
   showHeader?: boolean
 }
 
+const DESCRIPTION =
+  "Pentecostal Church of Christ. A junction of the Living God."
+
 const Layout = ({
   title,
   children,
@@ -26,7 +29,7 @@ const Layout = ({
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
-      <SEO title={title} />
+      <SEO title={title} description={DESCRIPTION} />
       <SnackbarProvider
         maxSnack={1}
         anchorOrigin={{
