@@ -153,3 +153,8 @@ export const Copyright = styled.div`
     font-size: ${({ theme }) => theme?.fontSize?.custom(12)};
   }
 `
+
+export const AnchorTag = styled.a`
+  text-decoration: none;
+  color: ${({ theme }) => theme?.colors?.white};
+`
