@@ -86,6 +86,7 @@ const fontFamily = {
    * normal font family
    */
   normal: "Roboto, sans-serif",
+  text: "Comfortaa, sans-serif",
   /**
    * font family for headers
    */

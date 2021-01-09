@@ -4,8 +4,8 @@ export const AboutContainer = styled.section`
   display: flex;
   flex-flow: column;
   max-width: 800px;
-  margin: 0 auto;
-  font-family: ${({ theme }) => theme?.fontFamily?.normal};
+  margin: 4rem auto;
+  font-family: ${({ theme }) => theme?.fontFamily?.text};
 `
 
 export const Heading = styled.h3`
